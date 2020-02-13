@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+}
+.header {
+    height: 100px;
+    background-color: darkseagreen;
+    padding: 10px;
+}
+.post-title {
+    font-family: "Arial Black", sans-serif;
+}
+.title {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+}
+.content {
+    padding: 10px;
+}
+.btn-post:hover {
+    box-shadow: 4px 4px crimson;
+    background-color: cornflowerblue;
+}
+.footer {
+    background-color: darkseagreen;
+    height: 100px;
+    position: fixed;
+    left: 0; bottom: 0;
+    width: 100%;
+    font-size: 24px;
+    padding: 10px;
+}
+.contact {
+    font-size: 30px;
+}
