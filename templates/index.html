@@ -16,8 +16,10 @@
     {% block mainpart %}
         <section class="content">
             {% for post in posts %}
-                <img src={{ post.post_image }}>
                 <div class="post-title">
+                    {% if post.post_image %}
+                        <img width="200px" height="50px" src={{ post.post_image }}><br>
+                    {% endif %}
                     <button class="btn-post"><a href="{% url 'post' post.id %}" class="title"><h1>{{ post.post_title }}</h1></a></button>
                     <h3>{{ post.post_annotation }}</h3><br>
                 </div>
@@ -27,9 +29,9 @@
 
     {% block down %}
         <footer class="footer">
-            <a href="http://127.0.0.1:8000/contacts/">Наши контакты:</a> <br>
-            <a href="http://127.0.0.1:8000">Главная</a> <br>
-            <a href="http://127.0.0.1:8000/about/">О сайте</a> <br>
+            <a href="http://127.0.0.1:8000/contacts/" class="footer-link">Наши контакты:</a> <br>
+            <a href="http://127.0.0.1:8000" class="footer-link">Главная</a> <br>
+            <a href="http://127.0.0.1:8000/about/" class="footer-link">О сайте</a> <br>
         </footer>
     {% endblock %}
 </body>

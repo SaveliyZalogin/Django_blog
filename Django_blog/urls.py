@@ -21,7 +21,7 @@ from django.urls import re_path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index),
+    path('', views.index, name="main"),
     path('about/', views.about),
     path('contacts/', views.contacts),
     re_path(r'^post/(?P<post_id>\d+)$', views.post, name="post")

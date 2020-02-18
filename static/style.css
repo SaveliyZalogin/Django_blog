@@ -15,11 +15,11 @@
     color: black;
 }
 .content {
-    padding: 10px;
+    padding: 20px;
 }
 .btn-post:hover {
-    box-shadow: 4px 4px crimson;
-    background-color: cornflowerblue;
+    box-shadow: 3px 3px black;
+    background-color: darkseagreen;
 }
 .footer {
     background-color: darkseagreen;
@@ -32,4 +32,13 @@
 }
 .contact {
     font-size: 30px;
+    text-decoration: none;
+    color: black;
+}
+.footer-link {
+    text-decoration: none;
+    color: black;
+}
+.content-text {
+    width: 50%;
 }

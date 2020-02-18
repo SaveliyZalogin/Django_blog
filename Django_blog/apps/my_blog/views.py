@@ -22,8 +22,10 @@ def btn():
 
 def index(request):
     post_list = Post.objects.all()
+    key_word = Post.objects.all()
     context = {
         'posts': post_list,
+        'key_word': key_word,
     }
     return render(request, "index.html", context)
 
