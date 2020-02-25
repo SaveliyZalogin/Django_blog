@@ -1,5 +1,9 @@
 {% extends "index.html" %}
-{% load static %}
+    {% block menu %}
+        <header  class="header">
+            <h1 align="center">Пост {{ post.id }}</h1>
+        </header>
+    {% endblock %}
     {% block mainpart %}
         <section class="content">
             <h1>{{ post.post_title }}</h1><br>

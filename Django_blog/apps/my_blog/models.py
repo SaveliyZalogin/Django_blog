@@ -23,6 +23,10 @@ class Author(models.Model):
     email = models.CharField(max_length=100)
     country = models.CharField(max_length=100)
     gender = models.CharField(max_length=100, choices=choises, default=Male)
+    code = models.CharField(max_length=10, blank=True)
+
+    def __str__(self):
+        return f'{self.id} {self.name} '
 
 
 class Post(models.Model):

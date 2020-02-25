@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Коронавирус для всех бесплатно</title>
+    <title>Продажа аккаунтов Бравл Старс</title>
     <link rel="stylesheet" href="{% static "style.css" %}">
 </head>
 <body>
@@ -22,6 +22,7 @@
                     {% endif %}
                     <button class="btn-post"><a href="{% url 'post' post.id %}" class="title"><h1>{{ post.post_title }}</h1></a></button>
                     <h3>{{ post.post_annotation }}</h3><br>
+                    <a class="title" href="{% url 'author' post.author_id %}">{{ post.author.name }}</a>
                 </div>
             {% endfor %}
         </section>

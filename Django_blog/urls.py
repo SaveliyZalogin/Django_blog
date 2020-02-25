@@ -24,6 +24,6 @@ urlpatterns = [
     path('', views.index, name="main"),
     path('about/', views.about),
     path('contacts/', views.contacts),
-    re_path(r'^post/(?P<post_id>\d+)$', views.post, name="post")
-
+    re_path(r'^post/(?P<post_id>\d+)$', views.post, name="post"),
+    re_path(r'^author/(?P<author_id>\d+)$', views.author, name="author"),
 ]

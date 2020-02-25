@@ -3,6 +3,7 @@ from django.http import HttpResponse
 import random
 from Django_blog.apps.my_blog.models import Post
 from Django_blog.apps.my_blog.models import Key_word
+from Django_blog.apps.my_blog.models import Author
 
 
 def hello():
@@ -23,9 +24,11 @@ def btn():
 def index(request):
     post_list = Post.objects.all()
     key_word = Post.objects.all()
+    authors = Author.objects.all()
     context = {
         'posts': post_list,
         'key_word': key_word,
+        'authors': authors,
     }
     return render(request, "index.html", context)
 
@@ -54,3 +57,11 @@ def post(request, post_id):
         'post': post,
     }
     return render(request, "posts.html", context)
+
+
+def author(requset, author_id):
+    author = Author.objects.get(id=author_id)
+    context = {
+        'author': author
+    }
+    return render(requset, "author.html", context)
